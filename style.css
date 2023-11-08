@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #3cb371;
+    font-family: sans-serif;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.flex-container-1, .flex-container-2 {
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+    align-items: stretch;
+}
+
+.flex-container-2 {
+    width: 36%;
+}
+
+.flex-container-1 section,
+.flex-container-2 section {
+    flex-grow: 1;
+    height: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin: 10px;
+    align-self: stretch;
+    height: 100%;
+}
+
+div.image {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+section:nth-of-type(1) .image {
+    background-image: url('https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-01.png');
+}
+
+section:nth-of-type(2) .image {
+    background-image: url('https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-02.png');
+}
+
+section:nth-of-type(3) .image {
+    background-image: url('https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-03.png');
+}
+
+section h1, section p {
+    padding: 20px;
+}
+
+section p {
+    color: rgb(102, 102, 102);
+}
+
+.p {
+    padding-bottom: auto;
+}
+
+footer {
+    font-size: 0.8em;
+    padding: 10px;
+    color: rgb(148, 148, 148);
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.left-content {
+    float: left;
+}
+
+.right-content {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section:nth-of-type(2) {
+    order: 2;
+}
+
+div.image-2 {
+    background: url('https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-02.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+section:nth-of-type(3) {
+    order: 3;
+}
+
+div.image-3 {
+    background: url('https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/1366/posts/26611/attachment/image-03.png');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+section:nth-of-type(4) {
+    order: 4;
+}
+
+section:nth-of-type(5) {
+    order: 5;
+}
+
+section:nth-of-type(6) {
+    order: 6;
+}
+
+section:nth-of-type(7) {
+    order: 7;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .flex-container-1,
+    .flex-container-2,
+    section {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+}
